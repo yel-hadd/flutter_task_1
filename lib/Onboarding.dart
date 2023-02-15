@@ -20,33 +20,48 @@ class _OnboardingState extends State<Onboarding> {
           ),
         ),
         child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 500),
-              SizedBox(height: 90, child: Image.asset("assets/icon.png")),
-              SizedBox(height: 40),
-              Text(
-                'Welcome to our store',                  
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0),
-                
-              ),
-              Text(
-                'Get your groceries as fast as one hour',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              Center(
-                child:
-                  MaterialButton(
-                    onPressed: () {},
-                    child:
-                      Text("Get Started"),
-                  )
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                SizedBox(height: 60, child: Image.asset("assets/icon.png")),
+                const SizedBox(height: 10),
+                const Text(
+                  'Welcome to our store',                  
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.clip,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0, color: Colors.white),                
+                ),
+                const SizedBox(height: 5),
+                const Text(
+                  'Get your groceries as fast as one hour',
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0, color: Colors.grey),
+                ),
+                const SizedBox(height: 10),
+                Center(
+                  child:
+                    MaterialButton(
+                      onPressed: () {},
+                      color: Colors.green,
+                      height: 60,
+                      minWidth: 350,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12)),
+                      child:
+                        const Text(
+                          "Get Started",
+                          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0, color: Colors.white),
+                          ),
+                    )
+                ),
+                const SizedBox(height: 50),
+              ],
+            ),
           ),
         ),
       ),

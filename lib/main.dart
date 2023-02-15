@@ -1,16 +1,15 @@
-import 'dart:js';
 import 'package:flutter/material.dart';
-import 'Onboarding.dart';
-import 'LoginScreen.dart';
+import 'onboarding.dart';
+import 'loginScreen.dart';
 
 void main() {
   runApp(MaterialApp(
     // theme: ThemeData.dark(),
-    initialRoute: '/onboarding',
+    initialRoute: '/loginscreen',
     debugShowCheckedModeBanner: false,
     routes: {
       '/onboarding': (context) => const Onboarding(),
-      '/loginScreen': (context) => const LoginScreen(),
+      '/loginscreen': (context) => const LoginScreen(),
     },
   ));
 }

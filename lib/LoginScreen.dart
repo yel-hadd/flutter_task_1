@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'utils/custom_icons_icons.dart';
+import 'package:intl_phone_field/intl_phone_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -29,69 +31,86 @@ class _LoginScreenState extends State<LoginScreen> {
                 const Align(
                   alignment: Alignment.topLeft,
                   child: Text(
-                    'Get your groceries\nwith nectar',                  
+                    'Get your groceries\nwith nectar',
                     textAlign: TextAlign.left,
                     overflow: TextOverflow.clip,
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.black),                
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30.0,
+                        color: Colors.black),
+                  ),
+                ),
+                const SizedBox(height: 15),
+                IntlPhoneField(
+                  decoration: const InputDecoration(
+                    labelText: 'Phone Number',
+                    border: OutlineInputBorder(
+                      borderSide: BorderSide(),
+                    ),
+                  ),
+                  onChanged: (phone) {},
+                  onCountryChanged: (country) {},
+                ),
+                const Text(
+                  "Or connect with social media",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(height: 15),
+                SizedBox(
+                  height: 60,
+                  width: 1080,
+                  child: ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                        CustomIcons.google),
+                    label: const Text(
+                      "Continue with Google",
+                      textAlign: TextAlign.left,
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 25.0,
+                        color: Colors.white),
+                      ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.lightBlue,
+                      fixedSize: const Size(300, 100),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20)
+                      )
+                    ),
                   ),
                 ),
                 const SizedBox(height: 10),
-                ElevatedButton.icon(
-                  onPressed: (){
-                      print("You pressed Icon Elevated Button");
-                    }, 
-                  icon: const Icon(Icons.save),  //icon data for elevated button
-                  label: const Text("Elevated Button with Icon"), //label text 
-                ),
-                Center(
-                  child:
-                    MaterialButton(
-                      onPressed: () {},
-                      color: Colors.green,
-                      height: 60,
-                      minWidth: 350,
+                SizedBox(
+                  height: 60,
+                  width: 1080,
+                  child: ElevatedButton.icon(
+                    onPressed: () {},
+                    icon: const Icon(
+                        CustomIcons.facebook_f),
+                    label: const Text(
+                      "Continue with Facebook",
+                      textAlign: TextAlign.left,
+                      overflow: TextOverflow.clip,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 25.0,
+                        color: Colors.white),
+                      ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      fixedSize: const Size(300, 100),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                      child:
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.home, color: Colors.white,),
-                            SizedBox(width: 15),
-                            Text(
-                              "Get Started",
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0, color: Colors.white),
-                              ),
-                          ],
-                        ),
-                    )
+                        borderRadius: BorderRadius.circular(20)
+                      )
+                    ),
+                  ),
                 ),
-                const SizedBox(height: 10),
-                Center(
-                  child:
-                    MaterialButton(
-                      onPressed: () {},
-                      color: Colors.green,
-                      height: 60,
-                      minWidth: 350,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12)),
-                      child:
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Icon(Icons.facebook, color: Colors.white,),
-                            SizedBox(width: 15),
-                            Text(
-                              "Get Started",
-                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0, color: Colors.white),
-                              ),
-                          ],
-                        ),
-                    )
-                ),
+
                 const SizedBox(height: 50),
               ],
             ),

@@ -36,6 +36,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 10),
+                ElevatedButton.icon(
+                  onPressed: (){
+                      print("You pressed Icon Elevated Button");
+                    }, 
+                  icon: const Icon(Icons.save),  //icon data for elevated button
+                  label: const Text("Elevated Button with Icon"), //label text 
+                ),
                 Center(
                   child:
                     MaterialButton(

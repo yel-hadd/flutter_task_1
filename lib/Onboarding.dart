@@ -1,5 +1,6 @@
 import 'dart:js';
 import 'package:flutter/material.dart';
+import 'loginScreen.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
@@ -15,7 +16,7 @@ class _OnboardingState extends State<Onboarding> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/onboarding_bg.jpg"),
+            image: AssetImage("assets/onboarding_bg.png"),
             fit: BoxFit.cover,
           ),
         ),
@@ -46,7 +47,10 @@ class _OnboardingState extends State<Onboarding> {
                 Center(
                   child:
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                        context, MaterialPageRoute(builder: (context) => LoginScreen()));
+                      },
                       color: Colors.green,
                       height: 60,
                       minWidth: 350,

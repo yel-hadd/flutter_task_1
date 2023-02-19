@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'utils/custom_icons_icons.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'home.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -45,7 +46,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: const InputDecoration(
                     labelText: 'Phone Number',
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(),
+                      borderSide: BorderSide(
+                        color: Colors.green,
+                      ),
                     ),
                   ),
                   onChanged: (phone) {},
@@ -63,7 +66,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 60,
                   width: 1080,
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => const Home())));
+                    },
                     icon: const Icon(
                         CustomIcons.google),
                     label: const Text(
@@ -72,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       overflow: TextOverflow.clip,
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        fontSize: 25.0,
+                        fontSize: 22.0,
                         color: Colors.white),
                       ),
                     style: ElevatedButton.styleFrom(
@@ -89,7 +94,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 60,
                   width: 1080,
                   child: ElevatedButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: ((context) => const Home())));
+                    },
                     icon: const Icon(
                         CustomIcons.facebook_f),
                     label: const Text(
@@ -98,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       overflow: TextOverflow.clip,
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
-                        fontSize: 25.0,
+                        fontSize: 22.0,
                         color: Colors.white),
                       ),
                     style: ElevatedButton.styleFrom(
